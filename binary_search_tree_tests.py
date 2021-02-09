@@ -43,6 +43,7 @@ class TestLab4(unittest.TestCase):
         bst.insert(12, 'even more stuff')
         bst.insert(9, 'gotta have more stuff')
         self.assertTrue(bst.search(9))
+        
 
 if __name__ == '__main__': 
     unittest.main()
