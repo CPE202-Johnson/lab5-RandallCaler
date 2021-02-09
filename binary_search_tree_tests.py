@@ -71,6 +71,7 @@ class TestLab4(unittest.TestCase):
         self.assertTrue(bst.is_empty())
         self.assertFalse(bst.search(11))
         self.assertEqual(bst.tree_height(), None)
+        self.assertEqual(bst.level_order_list(), [])
         
 
 if __name__ == '__main__': 
