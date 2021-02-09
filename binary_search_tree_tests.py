@@ -73,6 +73,17 @@ class TestLab4(unittest.TestCase):
         self.assertEqual(bst.tree_height(), None)
         self.assertEqual(bst.level_order_list(), [])
         
+    def test_simple9(self):
+        bst = BinarySearchTree()
+        self.assertTrue(bst.is_empty())
+        self.assertFalse(bst.search(11))
+        self.assertEqual(bst.find_max(), None)
+        bst.insert(10, 'stuff')
+        bst.insert(11, 'more stuff')
+        bst.insert(12, 'even more stuff')
+        bst.insert(9, 'gotta have more stuff')
+        self.assertEqual(bst.level_order_list(), [10,9,11,12])
+        
 
 if __name__ == '__main__': 
     unittest.main()
