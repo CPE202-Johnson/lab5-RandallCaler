@@ -48,10 +48,12 @@ class TestLab4(unittest.TestCase):
         bst = BinarySearchTree()
         self.assertTrue(bst.is_empty())
         self.assertFalse(bst.search(11))
+        self.assertEqual(bst.find_min(), None)
         bst.insert(10, 'stuff')
         bst.insert(11, 'more stuff')
         bst.insert(12, 'even more stuff')
         bst.insert(9, 'gotta have more stuff')
+        self.assertEqual(bst.find_min(), (9, 'gotta have more stuff'))
         
 
 if __name__ == '__main__': 
