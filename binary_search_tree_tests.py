@@ -44,6 +44,15 @@ class TestLab4(unittest.TestCase):
         bst.insert(9, 'gotta have more stuff')
         self.assertTrue(bst.search(9))
         
+    def test_simple6(self):
+        bst = BinarySearchTree()
+        self.assertTrue(bst.is_empty())
+        self.assertFalse(bst.search(11))
+        bst.insert(10, 'stuff')
+        bst.insert(11, 'more stuff')
+        bst.insert(12, 'even more stuff')
+        bst.insert(9, 'gotta have more stuff')
+        
 
 if __name__ == '__main__': 
     unittest.main()
