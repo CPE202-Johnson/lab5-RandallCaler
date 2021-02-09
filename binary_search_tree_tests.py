@@ -55,6 +55,23 @@ class TestLab4(unittest.TestCase):
         bst.insert(9, 'gotta have more stuff')
         self.assertEqual(bst.find_min(), (9, 'gotta have more stuff'))
         
+    def test_simple7(self):
+        bst = BinarySearchTree()
+        self.assertTrue(bst.is_empty())
+        self.assertFalse(bst.search(11))
+        self.assertEqual(bst.find_max(), None)
+        bst.insert(10, 'stuff')
+        bst.insert(11, 'more stuff')
+        bst.insert(12, 'even more stuff')
+        bst.insert(9, 'gotta have more stuff')
+        self.assertEqual(bst.find_max(), (12, 'even more stuff'))
+        
+    def test_simple8(self):
+        bst = BinarySearchTree()
+        self.assertTrue(bst.is_empty())
+        self.assertFalse(bst.search(11))
+        self.assertEqual(bst.tree_height(), None)
+        
 
 if __name__ == '__main__': 
     unittest.main()
