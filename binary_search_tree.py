@@ -121,6 +121,8 @@ class BinarySearchTree:
         # You MUST use your queue_array data structure from lab 3 to implement this method
         q = Queue(25000) # Don't change this!
         lst = []
+        if self.root is None:
+          return lst
         q.enqueue(self.root)
         while q.size() > 0:
           temp = q.dequeue()
