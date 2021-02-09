@@ -15,6 +15,20 @@ class TestLab4(unittest.TestCase):
         self.assertEqual(bst.inorder_list(), [10])
         self.assertEqual(bst.preorder_list(), [10])
         self.assertEqual(bst.level_order_list(), [10])
+        
+    def test_simple2(self):
+        bst = BinarySearchTree()
+        self.assertTrue(bst.is_empty())
+        bst.insert(10, 'stuff')
+        self.assertFalse(bst.search(11))
+        
+    def test_simple3(self):
+        bst = BinarySearchTree()
+        self.assertTrue(bst.is_empty())
+        bst.insert(10, 'stuff')
+        bst.insert(11, 'more stuff')
+        bst.insert(12, 'even more stuff')
+        self.assertTrue(bst.search(12))
 
 if __name__ == '__main__': 
     unittest.main()
